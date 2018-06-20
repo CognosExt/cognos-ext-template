@@ -1,0 +1,5 @@
+# This is the config for documentationjs @see https://github.com/documentationjs/documentation/blob/8ea9e834e5207b6071dc50a5877042af7cfd2a64/docs/CONFIG.md
+name: My Cognos Extension
+destination: docs
+toc:
+  - name: Extension

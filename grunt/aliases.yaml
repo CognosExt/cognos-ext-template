@@ -1,0 +1,28 @@
+default:
+  description: 'Default (dev) build'
+  tasks:
+    - dev
+dev:
+  description: 'Development build'
+  tasks:
+    - 'clean:dist'
+    - 'concurrent:validate'
+    - 'copy'
+    - 'zip'
+    - 'cognos_ext_upload'
+prod:
+  description: 'Production build'
+  tasks:
+    - 'clean:dist'
+    - 'concurrent:validate'
+    - 'copy'
+    # We uglify and minify over the copy
+    - 'uglify'
+    - 'cssmin'
+    - 'zip'
+    - 'cognos_ext_upload'
+docs:
+  description: Building the Documentation
+  tasks:
+    - 'clean:docs'
+    - 'documentation'

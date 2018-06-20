@@ -1,0 +1,266 @@
+{
+  "type": "object",
+  "definitions": {
+    "extType": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^v1/ext/.+$"
+    },
+    "noEmptyString": {
+      "type": "string",
+      "minLength": 1
+    },
+    "toolItem": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "$ref": "#/definitions/noEmptyString"
+        },
+        "title": {
+          "type": "string"
+        },
+        "type": {
+          "$ref": "#/definitions/noEmptyString"
+        },
+        "actionController": {
+          "$ref": "#/definitions/noEmptyString"
+        },
+        "label": {
+          "$ref": "#/definitions/noEmptyString"
+        },
+        "containerId": {
+          "$ref": "#/definitions/noEmptyString"
+        },
+        "icon": {
+          "type": "string"
+        },
+        "weight": {
+          "type": "number"
+        },
+        "class": {
+          "type": "string"
+        },
+        "comment": {
+          "type": "string"
+        },
+        "options": {
+          "type": "object"
+        },
+        "push": {
+          "type": "string",
+          "enum": [
+            "true",
+            "false"
+          ]
+        },
+        "coachMark": {
+          "type": "object",
+          "properties": {
+            "title": {
+              "type": "string"
+            },
+            "contents": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false,
+          "required": [
+            "title"
+          ]
+        },
+        "lensable": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "id"
+      ]
+    },
+    "collectionItem": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "$ref": "#/definitions/noEmptyString"
+        },
+        "containerId": {
+          "$ref": "#/definitions/noEmptyString"
+        },
+        "label": {
+          "$ref": "#/definitions/noEmptyString"
+        },
+        "lensable": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "id",
+        "containerId"
+      ]
+    },
+    "collectionContainerItem": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "$ref": "#/definitions/noEmptyString"
+        },
+        "label": {
+          "$ref": "#/definitions/noEmptyString"
+        },
+        "lensable": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "id"
+      ]
+    },
+    "collectionContainer": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "$ref": "#/definitions/noEmptyString"
+        },
+        "items": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/collectionContainerItem"
+          }
+        },
+        "lensable": {
+          "type": "boolean"
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "id"
+      ]
+    },
+    "feature": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "$ref": "#/definitions/noEmptyString"
+        },
+        "excludeItems": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/noEmptyString"
+          }
+        },
+        "excludeFeatures": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/noEmptyString"
+          }
+        },
+        "toolItems": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/toolItem"
+          }
+        },
+        "content": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "$ref": "#/definitions/extType"
+            },
+            "options": {
+              "type": "object"
+            }
+          },
+          "additionalProperties": false,
+          "required": [
+            "type"
+          ]
+        },
+        "cssStyles": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/extType"
+          }
+        },
+        "collectionItems": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/collectionItem"
+          }
+        },
+        "collectionContainers": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/collectionContainer"
+          }
+        },
+        "comment": {
+          "type": "string"
+        },
+        "lensable": {
+          "type": "boolean"
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "id"
+      ]
+    },
+    "extension": {
+      "type": "object",
+      "properties": {
+        "perspective": {
+          "$ref": "#/definitions/noEmptyString"
+        },
+        "features": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/definitions/feature"
+          }
+        },
+        "type": {
+          "type": "string",
+          "enum": [
+            "home",
+            "login"
+          ]
+        },
+        "lensable": {
+          "type": "boolean",
+          "default": true
+        },
+        "comment": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "properties": {
+    "schemaVersion": {
+      "type": "string",
+      "enum": [
+        "1.0",
+        "2.0"
+      ]
+    },
+    "name": {
+      "type": "string",
+      "pattern": "[a-zA-Z0-9_ ]+$"
+    },
+    "extensions": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/definitions/extension"
+      }
+    },
+    "comment": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "name",
+    "extensions"
+  ]
+}

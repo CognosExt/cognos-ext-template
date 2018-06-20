@@ -1,0 +1,38 @@
+{
+  "name": "cognos-ext-template",
+  "version": "1.0.0",
+  "description": "Template for clean Cognos Extension development",
+  "main": "index.js",
+  "scripts": {
+    "test": "grunt"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CognosExt/cognos-ext-template.git"
+  },
+  "keywords": [
+    "cognos",
+    "template"
+  ],
+  "author": "Reinier Battenberg",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/CognosExt/cognos-ext-template/issues"
+  },
+  "homepage": "https://github.com/CognosExt/cognos-ext-template#readme",
+  "devDependencies": {
+    "grunt": "^1.0.3",
+    "grunt-cognos-ext-upload": "^1.1.4",
+    "grunt-concurrent": "~2.3.1",
+    "grunt-contrib-clean": "~1.1.0",
+    "grunt-contrib-copy": "~1.0.0",
+    "grunt-contrib-cssmin": "~2.2.1",
+    "grunt-contrib-uglify": "~3.1.0",
+    "grunt-contrib-watch": "^1.1.0",
+    "grunt-documentation": "^1.2.3",
+    "grunt-json-schema": "^1.1.0",
+    "grunt-prettier": "^0.1.0",
+    "grunt-zip": "^0.17.1",
+    "load-grunt-config": "^0.19.2"
+  }
+}
