@@ -1,10 +1,11 @@
 module.exports = {
   default: {
     options: {
-      name: 'Insights_Always_Button',
-      url: 'https://srv06.gologic.eu/ibmcognos',
+      name: 'Module_Name',
+      url: 'https://example.com/ibmcognos',
+      type: 'extensions', // or themes
       user: 'tester',
-      password: 'tester',
+      password: 'secret',
       debug: false,
       zipfile: 'dist/extension.zip'
     }
