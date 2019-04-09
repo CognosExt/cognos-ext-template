@@ -1,0 +1,7 @@
+{
+  "_comment": "Copy this file to Settings.json and adapt the settings",
+  "url": "https://localhost/ibmcognos",
+  "user": "testuser",
+  "password": "verySecret",
+  "debug": false
+}
