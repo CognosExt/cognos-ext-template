@@ -1,6 +1,6 @@
 {
   "name": "cognos-ext-template",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Template for clean Cognos Extension development",
   "main": "index.js",
   "scripts": {

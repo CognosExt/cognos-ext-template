@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.1](https://github.com/CognosExt/cognos-ext-template/compare/v1.1.0...v1.1.1) (2019-04-09)
+
+
+### Bug Fixes
+
+* typoy ([8f5298a](https://github.com/CognosExt/cognos-ext-template/commit/8f5298a))
+
+
+
 # 1.1.0 (2019-04-09)
 
 
