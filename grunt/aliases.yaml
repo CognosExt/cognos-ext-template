@@ -10,6 +10,7 @@ dev:
     - 'copy'
     - 'zip'
     - 'cognos_ext_upload'
+    - "play"
 prod:
   description: 'Production build'
   tasks:
@@ -21,8 +22,10 @@ prod:
     - 'cssmin'
     - 'zip'
     - 'cognos_ext_upload'
+    - "play"
 docs:
   description: Building the Documentation
   tasks:
     - 'clean:docs'
     - 'documentation'
+    - "play"
