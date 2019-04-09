@@ -21,8 +21,8 @@
   },
   "homepage": "https://github.com/CognosExt/cognos-ext-template#readme",
   "devDependencies": {
-    "grunt": "^1.0.3",
-    "grunt-cognos-ext-upload": "^1.2.0",
+    "grunt": "^1.0.4",
+    "grunt-cognos-ext-upload": "^1.4.1",
     "grunt-concurrent": "~2.3.1",
     "grunt-contrib-clean": "~1.1.0",
     "grunt-contrib-copy": "~1.0.0",
