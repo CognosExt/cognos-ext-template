@@ -3,5 +3,6 @@
   "url": "https://localhost/ibmcognos",
   "user": "testuser",
   "password": "verySecret",
+  "type" :"extensions/themes choose one", 
   "debug": false
 }

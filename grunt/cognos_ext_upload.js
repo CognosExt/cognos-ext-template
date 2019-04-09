@@ -21,7 +21,7 @@ module.exports = {
     options: {
       name: pack.name,
       url: settings.url,
-      type: 'extensions', // or themes
+      type: settings.type,
       user: settings.user,
       password: settings.password,
       debug: settings.debug,
