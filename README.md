@@ -4,9 +4,11 @@ Template for clean Cognos Extension development
 ##Usage:
 
 - pull the code:
+
     git clone https://github.com/CognosExt/cognos-ext-template.git
 
 - remove the .git folder
+
     rm -rf .git
 
 - replace the code in the src folder with your extension (or use that code as the basis for your new extension)
@@ -19,6 +21,7 @@ Template for clean Cognos Extension development
 - copy the SettingsTemplate.json file to Settings.json and edit it according to your environment
 - edit the package.json file and change the name of the project and other settings you do not like.
 - run
+
     grunt
 
 
