@@ -1,32 +1,26 @@
 {
-  "name": "Insights_Always_Button",
+  "name": "Hello_World_Button",
   "schemaVersion": "1.0",
-  "comment":
-    "Button that is always present that will load all Insights things necessary.",
-  "comment":
-    "Like css, piwik etc. When the button is clicked, the About page opens",
+  "comment": "Hello World Button.",
+  "comment": "as an example",
   "extensions": [
     {
       "perspective": "common",
-      "comment":
-        "There is a special meta perspective called COMMON. Adding contributions to this perspective will cause the extension to be applied to All perspectives.",
+      "comment": "There is a special meta perspective called COMMON. Adding contributions to this perspective will cause the extension to be applied to All perspectives.",
       "features": [
         {
-          "id": "mountbatten.common.button.openPerspective",
+          "id": "helloworld.mountbatten.common.button.openPerspective",
           "toolItems": [
             {
-              "comment":
-                "This code adds a button to the navbar to directly open a custom View. The icon is By User:Sting [Public domain], via Wikimedia Commons",
+              "comment": "This code adds a button to the navbar to directly open a custom View. The icon is By User:Sting [Public domain], via Wikimedia Commons",
               "id": "mountbatten.report.opener",
               "containerId": "com.ibm.bi.glass.navbarLeadingGroup",
               "label": "Hello World",
               "type": "Button",
               "icon": "images/Cc-by_new.svg",
               "weight": 999,
-              "comment":
-                "The greater the weight, the higher the item will appear in the container.",
-              "actionController":
-                "v1/ext/Insights_Always_Button/js/controllers/HelloWorld"
+              "comment": "The greater the weight, the higher the item will appear in the container.",
+              "actionController": "v1/ext/Hello_World_Button/js/controllers/HelloWorld"
             }
           ]
         }
