@@ -1,3 +1,5 @@
+var chalk = require('chalk');
+
 try {
   var settings = require('../Settings.json');
 } catch (e) {
